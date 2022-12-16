@@ -10,7 +10,7 @@ const cors = require("cors");
 // import mongoose
 const mongoose = require("mongoose");
 mongoose.connect(
-  "mongodb+srv://NineOne91:UAyXX9HFsXADUuva@cluster0.jlgn6.mongodb.net/db_staycation?retryWrites=true&w=majority",
+  "mongodb+srv://NineOne91:UAyXX9HFsXADUuva@cluster0.jlgn6.mongodb.net/db_lenjhelenan?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
