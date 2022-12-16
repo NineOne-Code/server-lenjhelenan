@@ -62,7 +62,7 @@ module.exports = {
         //     treasures: treasure.length,
         //     cities: city.length
         // },
-        mostPicked,
+        ...mostPicked,
         // category,
         // testimonial
       });
@@ -127,7 +127,7 @@ module.exports = {
         //     cities: city.length
         // },
         // mostPicked,
-        category,
+        ...category,
         // testimonial
       });
     } catch (error) {
@@ -192,7 +192,7 @@ module.exports = {
         // },
         // mostPicked,
         // category,
-        testimonial,
+        ...testimonial,
       });
     } catch (error) {
       console.log(error);
