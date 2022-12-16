@@ -37,6 +37,7 @@ module.exports = {
         req.flash("alertMessage", "User tidak ada!!!");
         req.flash("alertStatus", "danger");
         res.redirect("/admin/signin");
+        return;
       }
       const isPasswordMatch = await bcrypt.compare(password, user.password);
       if (!isPasswordMatch) {
@@ -420,6 +421,7 @@ module.exports = {
         req.flash("alertMessage", "Image not found!");
         req.flash("alertStatus", "danger");
         res.redirect(`/admin/item/show-detail-item/${itemId}`);
+        return;
       }
       const feature = await Feature.create({
         name,
@@ -450,6 +452,7 @@ module.exports = {
         req.flash("alertMessage", "Success Update Feature!");
         req.flash("alertStatus", "success");
         res.redirect(`/admin/item/show-detail-item/${itemId}`);
+        return;
       } else {
         await fs.unlink(path.join(`public/${feature.imageUrl}`));
         feature.name = name;
@@ -459,6 +462,7 @@ module.exports = {
         req.flash("alertMessage", "Success Update Feature!");
         req.flash("alertStatus", "success");
         res.redirect(`/admin/item/show-detail-item/${itemId}`);
+        return;
       }
     } catch (error) {
       req.flash("alertMessage", `${error.message}`);
@@ -497,6 +501,7 @@ module.exports = {
         req.flash("alertMessage", "Image not found!");
         req.flash("alertStatus", "danger");
         res.redirect(`/admin/item/show-detail-item/${itemId}`);
+        return;
       }
       const activity = await Activity.create({
         name,
