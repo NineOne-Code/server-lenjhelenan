@@ -56,7 +56,7 @@ module.exports = {
         familyOccupation: "Product Designer",
       };
 
-      res.status(200).json(...mostPicked);
+      res.status(200).json([...mostPicked]);
     } catch (error) {
       console.log(error);
       res.status(500).json({ message: "Internal server error" });
