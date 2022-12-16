@@ -56,7 +56,16 @@ module.exports = {
         familyOccupation: "Product Designer",
       };
 
-      res.status(200).json([...mostPicked]);
+      res.status(200).json({
+        // hero:{
+        //     travelers: traveler.length,
+        //     treasures: treasure.length,
+        //     cities: city.length
+        // },
+        ...mostPicked,
+        // category,
+        // testimonial
+      });
     } catch (error) {
       console.log(error);
       res.status(500).json({ message: "Internal server error" });
